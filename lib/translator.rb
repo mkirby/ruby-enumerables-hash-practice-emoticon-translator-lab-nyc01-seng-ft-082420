@@ -3,7 +3,6 @@ require "yaml"
 require "pry"
 
 def load_library(file_path)
-  # code goes here
   translator = YAML.load_file(file_path)
   translator.each do |key, value|
     english_emoticon = value[0]
@@ -15,14 +14,16 @@ def load_library(file_path)
   translator
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(file_path, english_emoticon)
+  translator = load_library(file_path)
+  
+
 end
 
-def get_english_meaning(file_path, emoticon)
+def get_english_meaning(file_path, japanese_emoticon)
   translator = load_library(file_path)
   translator.each do |key, value|
-    if value[:japanese] == emoticon
+    if value[:japanese] == japanese_emoticon
       return key
     end
   end
