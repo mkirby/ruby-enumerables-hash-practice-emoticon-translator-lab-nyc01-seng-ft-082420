@@ -4,7 +4,7 @@ require "pry"
 
 def load_library(file_path)
   # code goes here
-  translator = YAML.load(file_path)
+  translator = YAML.load_file(file_path)
   binding.pry
 end
 
