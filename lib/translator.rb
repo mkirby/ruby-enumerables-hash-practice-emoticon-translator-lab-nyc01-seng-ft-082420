@@ -24,7 +24,7 @@ def get_english_meaning(file_path, emoticon)
   translator.each do |key, value|
     if value[:japanese] == emoticon
       return key
-      
-    endreturn "Sorry, that emoticon was not found"
+    end
+    return "Sorry, that emoticon was not found"
   end
 end
