@@ -6,10 +6,10 @@ def load_library(file_path)
   # code goes here
   translator = YAML.load_file(file_path)
   translator.each do |key, value|
-    puts key
-    puts value
-    
-    
+
+    translator[key][:english] = translator[key][0]
+    translator[key][:japanese] = translator[key][1]
+    puts translator
   end
 end
 
