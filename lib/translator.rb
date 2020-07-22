@@ -6,7 +6,7 @@ def load_library(file_path)
   # code goes here
   translator = YAML.load_file(file_path)
   translator.each do |key, value|
-
+    binding.pry
     translator[key][:english] = translator[key][0]
     translator[key][:japanese] = translator[key][1]
     puts translator
