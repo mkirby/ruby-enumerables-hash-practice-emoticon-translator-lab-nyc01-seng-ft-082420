@@ -7,8 +7,9 @@ def load_library(file_path)
   translator = YAML.load_file(file_path)
   translator.each do |key, value|
     binding.pry
-    translator[key][:english] = translator[key][0]
-    translator[key][:japanese] = translator[key][1]
+    translator[key][:english] = value[0]
+    translator[key][:japanese] = value[1]
+    binding.pry
     puts translator
   end
 end
