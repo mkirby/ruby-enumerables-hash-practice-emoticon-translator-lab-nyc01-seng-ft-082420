@@ -8,6 +8,8 @@ def load_library(file_path)
   translator.each do |key, value|
     puts key
     puts value
+    
+    
   end
 end
 
