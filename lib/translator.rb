@@ -11,9 +11,8 @@ def load_library(file_path)
     translator[key] = {}
     translator[key][:english] = english_emoticon
     translator[key][:japanese] = japanese_emoticon
-    binding.pry
-    puts translator
   end
+  translator
 end
 
 def get_japanese_emoticon
